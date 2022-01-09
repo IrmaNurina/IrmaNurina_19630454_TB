@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4d17edb9-9d71-4eb9-a1bb-13f103720a62">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select*from transaksi order by id_rute;]]>
+	</queryString>
+	<field name="id_rute" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="rute" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kelas" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_keberangkatan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="127" y="16" width="318" height="40" uuid="a23595a4-5dd8-4cfd-be70-9b5dfd57c68c"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[LAPORAN DATA TRANSAKSI]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="12" y="2" width="100" height="20" backcolor="#CCFFCC" uuid="05c54a97-aef5-4153-9b01-30ad9d50381d"/>
+				<box>
+					<pen lineWidth="1.25"/>
+					<topPen lineWidth="1.25"/>
+					<leftPen lineWidth="1.25"/>
+					<bottomPen lineWidth="1.25"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID RUTE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="112" y="2" width="100" height="20" backcolor="#CCFFCC" uuid="91b92e0b-2c49-405a-99ac-f9edc56c887b"/>
+				<box>
+					<pen lineWidth="1.25"/>
+					<topPen lineWidth="1.25"/>
+					<leftPen lineWidth="1.25"/>
+					<bottomPen lineWidth="1.25"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RUTE	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="212" y="2" width="100" height="20" backcolor="#CCFFCC" uuid="466bd729-a9da-4eb7-8a66-f3a712592949"/>
+				<box>
+					<pen lineWidth="1.25"/>
+					<topPen lineWidth="1.25"/>
+					<leftPen lineWidth="1.25"/>
+					<bottomPen lineWidth="1.25"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[KELAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="312" y="2" width="100" height="20" backcolor="#CCFFCC" uuid="ad9d3bd8-03c5-48fe-81ab-6b7f2ceb3f96"/>
+				<box>
+					<pen lineWidth="1.25"/>
+					<topPen lineWidth="1.25"/>
+					<leftPen lineWidth="1.25"/>
+					<bottomPen lineWidth="1.25"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[HARGA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="412" y="2" width="100" height="20" backcolor="#CCFFCC" uuid="3ea2609c-b9bb-4091-985d-a047772f89ea"/>
+				<box>
+					<pen lineWidth="1.25"/>
+					<topPen lineWidth="1.25"/>
+					<leftPen lineWidth="1.25"/>
+					<bottomPen lineWidth="1.25"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANGGAL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="12" y="0" width="100" height="20" uuid="d7a4d79a-80d8-4cdd-a77f-514ddab32dfe"/>
+				<box>
+					<pen lineWidth="1.25"/>
+					<topPen lineWidth="1.25"/>
+					<leftPen lineWidth="1.25"/>
+					<bottomPen lineWidth="1.25"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{id_rute}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="0" width="100" height="20" uuid="e429c27b-203c-46e0-8e64-a60158b6e578"/>
+				<box>
+					<pen lineWidth="1.25"/>
+					<topPen lineWidth="1.25"/>
+					<leftPen lineWidth="1.25"/>
+					<bottomPen lineWidth="1.25"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{rute}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="212" y="0" width="100" height="20" uuid="935e64c2-dca6-408a-88fc-53b210a748eb"/>
+				<box>
+					<pen lineWidth="1.25"/>
+					<topPen lineWidth="1.25"/>
+					<leftPen lineWidth="1.25"/>
+					<bottomPen lineWidth="1.25"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{kelas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="312" y="0" width="100" height="20" uuid="c263cc5c-8496-4faf-a21a-65dad506c540"/>
+				<box>
+					<pen lineWidth="1.25"/>
+					<topPen lineWidth="1.25"/>
+					<leftPen lineWidth="1.25"/>
+					<bottomPen lineWidth="1.25"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="412" y="0" width="100" height="20" uuid="234e3308-3ee3-4fa3-bd57-bad19abb5ecd"/>
+				<box>
+					<pen lineWidth="1.25"/>
+					<topPen lineWidth="1.25"/>
+					<leftPen lineWidth="1.25"/>
+					<bottomPen lineWidth="1.25"/>
+					<rightPen lineWidth="1.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{tanggal_keberangkatan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
